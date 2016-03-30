@@ -1,3 +1,6 @@
 <h2>{{model.title}}</h2>
 <p>{{model.body}}</p>
+
 {{post-detail post=model destroyPost="destroyPost"}}
+
+{{new-comment save2="saveComment3" post=model}}

@@ -3,12 +3,26 @@
 Blog description.
 
 <ul>
-  {{#each model as |post|}}
+  {{#each model.posts as |post|}}
      {{post-tile post=post update="update" destroyPost="destroyPost"}}
   {{/each}}
 </ul>
 
-{{new-post save2="save3"}}
+{{new-post save2="savePost3"}}
+
+<h2> Comments </h2>
+
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>Comment for {{comment.post.title}}</li>
+    <li>{{comment.user}}</li>
+    <li>{{comment.body}}</li>
+  {{/each}}
+</ul>
+
+{{new-comment save2="saveComment3"}}
+
+<hr>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
