@@ -1,0 +1,14 @@
+<h1> Welcome to the Blog </h1>
+
+Blog description.
+
+<ul>
+  {{#each model as |post|}}
+     {{post-tile post=post update="update" destroyPost="destroyPost"}}
+  {{/each}}
+</ul>
+
+{{new-post save2="save3"}}
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
