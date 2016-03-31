@@ -10,17 +10,6 @@ Blog description.
 
 {{new-post save2="savePost3"}}
 
-<h2> Comments </h2>
-
-<ul>
-  {{#each model.comments as |comment|}}
-    <li>Comment for {{comment.post.title}}</li>
-    <li>{{comment.user}}</li>
-    <li>{{comment.body}}</li>
-  {{/each}}
-</ul>
-
-{{new-comment save2="saveComment3"}}
 
 <hr>
 

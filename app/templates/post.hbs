@@ -1,6 +1,16 @@
 <h2>{{model.title}}</h2>
 <p>{{model.body}}</p>
 
-{{post-detail post=model destroyPost="destroyPost"}}
+<h4>Comments</h4>
 
-{{new-comment save2="saveComment3" post=model}}
+<ul>
+  {{#each model.comments as |comment|}}
+     <li>
+       {{comment.user}}<br>
+       {{comment.body}}
+     </li>
+  {{/each}}
+</ul>
+
+{{new-comment save2="save3" post=model}}
+{{post-detail post=model destroyPost="destroyPost"}}

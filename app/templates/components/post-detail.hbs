@@ -1,3 +1,9 @@
-<br>
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>Comment for {{comment.post.title}}</li>
+    <li>{{comment.user}}</li>
+    <li>{{comment.body}}</li>
+  {{/each}}
+</ul>
 
-<button {{action 'delete' post}}> Delete</button>
+<button {{action 'delete' post}}>Delete</button>

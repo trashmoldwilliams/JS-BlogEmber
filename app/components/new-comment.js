@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       var params = {
         user: this.get('user'),
         body: this.get('body'),
+        post: this.get('post'),
       };
       this.set('addNewComment', false);
       this.sendAction('save2', params);
